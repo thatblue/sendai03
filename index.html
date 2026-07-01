@@ -58,7 +58,10 @@
 <main>
   <section id="hero" class="hero">
     <img class="hero__ruby" src="assets/img/hero_ruby.svg" alt="" aria-hidden="true">
-    <img class="hero__decor" src="assets/img/hero_bg.svg" alt="" aria-hidden="true">
+    <picture class="hero__decor">
+      <source media="(max-width: 768px)" srcset="assets/img/hero_bg_sp.svg">
+      <img src="assets/img/hero_bg.svg" alt="" aria-hidden="true">
+    </picture>
     <img class="hero__tanabata" src="assets/img/hero_tanabata.svg" alt="" aria-hidden="true">
     <div class="hero__inner">
       <h1 class="hero__title">
