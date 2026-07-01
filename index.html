@@ -32,8 +32,28 @@
         -->
       </ul>
     </nav>
+    <button class="nav-toggle" aria-label="メニューを開く" aria-expanded="false" aria-controls="mobile-menu">
+      <span class="nav-toggle__bar"></span>
+      <span class="nav-toggle__bar"></span>
+      <span class="nav-toggle__bar"></span>
+    </button>
   </div>
 </header>
+
+<div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+  <nav aria-label="モバイルメニュー">
+    <ul class="mobile-menu__list">
+      <li class="mobile-menu__item"><a href="#news">お知らせ</a></li>
+      <li class="mobile-menu__item"><a href="#speakers">特別講演</a></li>
+      <li class="mobile-menu__item"><a href="#overview">開催概要・アクセス</a></li>
+      <li class="mobile-menu__item mobile-menu__item--external"><a href="policy.html">ポリシー<img src="assets/img/icons/external-link.svg" alt="" width="14" height="14" aria-hidden="true"></a></li>
+      <!--
+      <li class="mobile-menu__item mobile-menu__item--external"><a href="#">チーム<img src="assets/img/icons/external-link.svg" alt="" width="14" height="14" aria-hidden="true"></a></li>
+      <li class="mobile-menu__item"><a href="#">仙台グルメ</a></li>
+      -->
+    </ul>
+  </nav>
+</div>
 
 <main>
   <section id="hero" class="hero">
@@ -46,7 +66,7 @@
         Ruby<wbr>会議
       </h1>
       <p class="hero__num">#03</p>
-      <p class="hero__date">2026.11.21 開催！</p>
+      <p class="hero__date"><span class="hero__date-main">2026.11.21</span><span class="hero__date-suffix"> 開催！</span></p>
     </div>
     <a class="hero__scroll" href="#theme" aria-label="次のセクションへスクロール">
       <span>SCROLL</span>
@@ -74,9 +94,9 @@
       <p class="section-lead">スポンサー・登壇者・参加者を順次募集予定です。最新情報は公式Xでもお知らせします。</p>
 
       <ul class="news-list">
-        <li><time datetime="2026-07-02">2026/07/02</time> <a href="https://docs.google.com/forms/d/e/1FAIpQLScvsWJ_KKlg8jzR5QeXEd-u9BwsUBp4pYIAK3WpufssoJyeOQ/viewform?usp=header" target="_blank" rel="noopener noreferrer">CFPを募集開始</a>しました</li>
+        <li><time datetime="2026-07-02">2026/07/02</time> <a href="https://docs.google.com/forms/d/e/1FAIpQLScvsWJ_KKlg8jzR5QeXEd-u9BwsUBp4pYIAK3WpufssoJyeOQ/viewform?usp=header" target="_blank" rel="noopener noreferrer">CFPの募集</a>を開始しました</li>
         <li><time datetime="2026-05-08">2026/05/08</time> <a href="https://forms.gle/KbChoy4L6a4SaeCH8" target="_blank" rel="noopener noreferrer">スポンサー募集</a>を開始しました</li>
-        <li><time datetime="2026-04-28">2026/04/28</time> <a href="/documents/sponsorship_requirements.pdf" target="_blank" rel="noopener noreferrer">スポンサー募集要項</a>の更新を行いました</li>
+        <li><time datetime="2026-04-28">2026/04/28</time> <a href="/documents/sponsorship_requirements.pdf" target="_blank" rel="noopener noreferrer">スポンサー募集要項</a>を更新しました</li>
         <li><time datetime="2026-04-16">2026/04/16</time> <a href="/documents/sponsorship_requirements.pdf" target="_blank" rel="noopener noreferrer">スポンサー募集要項</a>を公開しました</li>
       </ul>
 
@@ -85,7 +105,7 @@
           <span class="badge badge--primary">受付中</span>
           <h3 class="card__title">スポンサー募集<br><span class="card__title-en">Call for Sponsors</span></h3>
           <p class="card__text">カンファレンスを一緒につくるパートナーを募集中。一緒に仙台とRubyを盛り上げませんか？</p>
-          <p class="card__meta"><svg width="13" height="14" viewBox="0 0 13 14" fill="none" aria-hidden="true"><path d="M3.5 1v2M9.5 1v2M1.5 5.5h10M2.5 2.5h8a1 1 0 0 1 1 1V11a1 1 0 0 1-1 1h-8a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1Z" stroke="#D11A2A" stroke-width="1.2" stroke-linecap="round"/></svg>申込締切 <span>2026/08/07(金)</span></p>
+          <p class="card__meta"><img src="assets/img/icons/calendar.svg" alt="" width="13" height="14" aria-hidden="true">申込締切 <span>2026/08/07(金)</span></p>
           <a class="card__cta card__cta--active" href="https://forms.gle/KbChoy4L6a4SaeCH8" target="_blank" rel="noopener noreferrer">
             <span>申し込む</span>
             <span class="card__cta-circle" aria-hidden="true"><svg width="6" height="10" viewBox="0 0 6 10" fill="none"><path d="M1 1l4 4-4 4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
@@ -96,7 +116,7 @@
           <span class="badge badge--primary">受付中</span>
           <h3 class="card__title">登壇者募集<br><span class="card__title-en">Call for Speakers</span></h3>
           <p class="card__text">持ち時間は15分を予定しています。<br>Rubyへのとっておきの❤️を聞かせてください！</p>
-          <p class="card__meta"><svg width="13" height="14" viewBox="0 0 13 14" fill="none" aria-hidden="true"><path d="M3.5 1v2M9.5 1v2M1.5 5.5h10M2.5 2.5h8a1 1 0 0 1 1 1V11a1 1 0 0 1-1 1h-8a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1Z" stroke="#D11A2A" stroke-width="1.2" stroke-linecap="round"/></svg>応募締切 <span>2026/08/24(月)</span></p>
+          <p class="card__meta"><img src="assets/img/icons/calendar.svg" alt="" width="13" height="14" aria-hidden="true">応募締切 <span>2026/08/24(月)</span></p>
           <a class="card__cta card__cta--active" href="https://docs.google.com/forms/d/e/1FAIpQLScvsWJ_KKlg8jzR5QeXEd-u9BwsUBp4pYIAK3WpufssoJyeOQ/viewform?usp=header" target="_blank" rel="noopener noreferrer">
             <span>応募する</span>
             <span class="card__cta-circle" aria-hidden="true"><svg width="6" height="10" viewBox="0 0 6 10" fill="none"><path d="M1 1l4 4-4 4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
@@ -205,11 +225,11 @@
       <p class="section-lead">カンファレンスを一緒につくるパートナーを募集中。一緒に仙台とRubyを盛り上げませんか？</p>
 
       <div class="sponsors-deadline">
-        <img class="overview-list__icon" src="assets/img/icons/calendar.svg" alt="" aria-hidden="true">
-        <div>
+        <div class="sponsors-deadline__header">
+          <img class="overview-list__icon" src="assets/img/icons/calendar.svg" alt="" aria-hidden="true">
           <p class="sponsors-deadline__label">スポンサー募集締切</p>
-          <p class="sponsors-deadline__date">2026年8月7日（金）</p>
         </div>
+        <p class="sponsors-deadline__date">2026年8月7日<span class="sponsors-deadline__date-day">（金）</span></p>
       </div>
 
       <!--
@@ -251,16 +271,38 @@
     <div class="site-footer__inner">
       <p class="site-footer__label">主催</p>
       <p class="site-footer__name">仙台Ruby会議03実行委員会</p>
-      <a class="site-footer__link" href="https://sendairb.connpass.com/" target="_blank" rel="noopener noreferrer">
+      <a class="site-footer__link" href="https://x.com/sendairb" target="_blank" rel="noopener noreferrer">
         <img src="assets/img/icons/x-logo.svg" alt="" width="15" height="15" aria-hidden="true">
         Sendai.rb
       </a>
     </div>
   </div>
   <div class="container">
-    <p class="site-footer__copyright">仙台Ruby会議03実行委員会</p>
+    <div class="site-footer__bottom">
+      <p class="site-footer__copyright">仙台Ruby会議03実行委員会</p>
+    </div>
   </div>
 </footer>
 
+<script>
+(function () {
+  var toggle = document.querySelector('.nav-toggle');
+  var menu = document.getElementById('mobile-menu');
+  if (!toggle || !menu) return;
+  toggle.addEventListener('click', function () {
+    var expanded = toggle.getAttribute('aria-expanded') === 'true';
+    toggle.setAttribute('aria-expanded', String(!expanded));
+    toggle.setAttribute('aria-label', expanded ? 'メニューを開く' : 'メニューを閉じる');
+    menu.setAttribute('aria-hidden', String(expanded));
+  });
+  menu.querySelectorAll('a').forEach(function (link) {
+    link.addEventListener('click', function () {
+      toggle.setAttribute('aria-expanded', 'false');
+      toggle.setAttribute('aria-label', 'メニューを開く');
+      menu.setAttribute('aria-hidden', 'true');
+    });
+  });
+})();
+</script>
 </body>
 </html>

@@ -32,8 +32,28 @@
         -->
       </ul>
     </nav>
+    <button class="nav-toggle" aria-label="メニューを開く" aria-expanded="false" aria-controls="mobile-menu">
+      <span class="nav-toggle__bar"></span>
+      <span class="nav-toggle__bar"></span>
+      <span class="nav-toggle__bar"></span>
+    </button>
   </div>
 </header>
+
+<div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+  <nav aria-label="モバイルメニュー">
+    <ul class="mobile-menu__list">
+      <li class="mobile-menu__item"><a href="/#news">お知らせ</a></li>
+      <li class="mobile-menu__item"><a href="/#speakers">特別講演</a></li>
+      <li class="mobile-menu__item"><a href="/#overview">開催概要・アクセス</a></li>
+      <li class="mobile-menu__item mobile-menu__item--external"><a href="policy.html" aria-current="page">ポリシー<img src="assets/img/icons/external-link.svg" alt="" width="14" height="14" aria-hidden="true"></a></li>
+      <!--
+      <li class="mobile-menu__item mobile-menu__item--external"><a href="#">チーム<img src="assets/img/icons/external-link.svg" alt="" width="14" height="14" aria-hidden="true"></a></li>
+      <li class="mobile-menu__item"><a href="#">仙台グルメ</a></li>
+      -->
+    </ul>
+  </nav>
+</div>
 
 <main class="policy-main">
   <div class="container">
@@ -102,9 +122,31 @@
     </div>
   </div>
   <div class="container">
-    <p class="site-footer__copyright">仙台Ruby会議03実行委員会</p>
+    <div class="site-footer__bottom">
+      <p class="site-footer__copyright">仙台Ruby会議03実行委員会</p>
+    </div>
   </div>
 </footer>
 
+<script>
+(function () {
+  var toggle = document.querySelector('.nav-toggle');
+  var menu = document.getElementById('mobile-menu');
+  if (!toggle || !menu) return;
+  toggle.addEventListener('click', function () {
+    var expanded = toggle.getAttribute('aria-expanded') === 'true';
+    toggle.setAttribute('aria-expanded', String(!expanded));
+    toggle.setAttribute('aria-label', expanded ? 'メニューを開く' : 'メニューを閉じる');
+    menu.setAttribute('aria-hidden', String(expanded));
+  });
+  menu.querySelectorAll('a').forEach(function (link) {
+    link.addEventListener('click', function () {
+      toggle.setAttribute('aria-expanded', 'false');
+      toggle.setAttribute('aria-label', 'メニューを開く');
+      menu.setAttribute('aria-hidden', 'true');
+    });
+  });
+})();
+</script>
 </body>
 </html>
