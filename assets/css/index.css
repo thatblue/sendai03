@@ -1254,7 +1254,7 @@ section {
     margin-bottom: 20px;
   }
   .news-list li {
-    font-size: 0.875rem;
+    font-size: 0.8125rem;
   }
   .cards {
     grid-template-columns: 1fr;
@@ -1269,6 +1269,10 @@ section {
   }
   .speaker-cards {
     grid-template-columns: 1fr;
+  }
+  .speaker-card__label {
+    font-size: 0.8125rem;
+    letter-spacing: 0.06em;
   }
   .speaker-card__photo {
     width: 80px;
