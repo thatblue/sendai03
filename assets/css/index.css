@@ -1209,9 +1209,9 @@ section {
   }
   .hero__inner {
     left: 50%;
-    top: 45%;
+    top: 50%;
     width: 100%;
-    transform: translateX(-50%);
+    transform: translate(-50%, -50%);
     text-align: center;
   }
   .hero__title {
